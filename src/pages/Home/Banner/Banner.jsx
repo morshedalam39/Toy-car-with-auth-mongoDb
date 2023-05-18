@@ -13,29 +13,15 @@ const Banner = () => {
     <div className="carousel w-full h-[600px]">
       <div id="slide1" className="carousel-item relative w-full">
         <img src={img1} className="w-full rounded-xl" />
-        <div className="absolute  flex   items-center h-full ">
-          {/* <div className='text-white space-y-7   '>
+
+        <div className="absolute  top-0 left-0 end-0 bottom-0 w-fit max-w-fit">
+          <div className='text-white space-y-7   '>
                         <h2 className='text-6xl font-bold '>Affordable Price For Car Servicing</h2>
                         <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
                         <div>
                         <button className="btn btn-accent">Add Toys</button>
                         </div>
-                    </div> */}
-
-
-          <div className="hero-content text-center text-neutral-content ">
-            <div className="max-w-md mx-auto">
-              <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-              <p className="mb-5">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                assumenda excepturi exercitationem quasi. In deleniti eaque aut
-                repudiandae et a id nisi.
-              </p>
-              <button className="btn btn-primary">Get Started</button>
-            </div>
-          </div>
-
-
+                    </div>
         </div>
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide4" className="btn btn-circle ">

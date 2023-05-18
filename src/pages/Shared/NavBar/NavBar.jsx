@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../../assets/logo.png'
+import logo from '../../../assets/logo2.png'
 
 const NavBar = () => {
     const navItems = <>
@@ -10,7 +10,7 @@ const NavBar = () => {
     <li> <Link to="/addToys">Add Toys</Link> </li>
 </>
 return (
-    <div className="navbar bg-slate-50 h-28 mb-4">
+    <div className="navbar bg-slate-50 h-24 mb-4 sticky top-0 z-20">
         <div className="navbar-start">
             <div className="dropdown">
                 <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -20,11 +20,16 @@ return (
                     {navItems}
                 </ul>
             </div>
-            <Link to="/" className="btn btn-ghost normal-case text-xl">
-                {/* <img src={logo} alt="" /> */}
-                <h2>logo</h2>
+           <div>
+           <Link to="/" >
+                <img className='w-40' src={logo} alt="" />
+                
+                
+            </Link>
+           </div>
+            <Link to="/" className="  text-xl">
                
-                <h2 className='font-bold mx-3'>name</h2>
+                <h2 className='font-bold '>PlayCarLand</h2>
             </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
