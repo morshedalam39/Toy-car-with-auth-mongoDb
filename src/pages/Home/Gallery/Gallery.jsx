@@ -11,7 +11,7 @@ const Gallery = () => {
 
 <h1 className="text-center text-4xl font-bold py-8">
               Our Top Cars Gallery
-              <hr className="w-80 mt-2 border-[3px] mx-auto border-cyan-400" />
+              <hr className="w-80 mt-2 border-[3px] mx-auto border-yellow-400" />
             </h1>
       <section className="py-6 dark:bg-gray-800 dark:text-gray-50">
         <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
