@@ -14,7 +14,7 @@ const Banner = () => {
       <div id="slide1" className="carousel-item relative w-full">
         <img src={img1} className="w-full rounded-xl" />
 
-        <div className="absolute  top-0 left-0 end-0 bottom-0 w-fit max-w-fit">
+        <div className="absolute  flex items-center">
           <div className='text-white space-y-7   '>
                         <h2 className='text-6xl font-bold '>Affordable Price For Car Servicing</h2>
                         <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
