@@ -13,15 +13,21 @@ const Banner = () => {
     <div className="carousel w-full h-[600px]">
       <div id="slide1" className="carousel-item relative w-full">
         <img src={img1} className="w-full rounded-xl" />
-
-        <div className="absolute  flex items-center">
-          <div className='text-white space-y-7   '>
-                        <h2 className='text-6xl font-bold '>Affordable Price For Car Servicing</h2>
-                        <p>There are many variations of passages of  available, but the majority have suffered alteration in some form</p>
-                        <div>
-                        <button className="btn btn-accent">Add Toys</button>
-                        </div>
-                    </div>
+        <div className="absolute flex items-center justify-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0) 100%)] mx-auto w-full">
+          <div className="text-white space-y-7 text-center ">
+            <h2 className="text-3xl font-bold">
+            Fuel your child's creativity with our  diverse <br /> toy car collection
+            </h2>
+            <p className="text-lg">
+             
+Race into excitement with our top-quality toy cars. Ignite imagination, fuel play, and create lasting memories. Start the fun now!
+            </p>
+            <div>
+              <button className="btn btn-outline btn-warning px-8">Get 
+               Start</button>
+             
+            </div>
+          </div>
         </div>
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide4" className="btn btn-circle ">
@@ -34,24 +40,23 @@ const Banner = () => {
       </div>
       <div id="slide2" className="carousel-item relative w-full">
         <img src={img2} className="w-full rounded-xl" />
-        <div className="absolute rounded-xl flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
-          <div className="text-white space-y-7 pl-12 w-1/2">
-            <h2 className="text-6xl font-bold">
-              Affordable Price For Car Servicing
+        <div className="absolute flex items-center justify-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0) 100%)] mx-auto w-full">
+        <div className="text-white space-y-7 text-center ">
+            <h2 className="text-3xl font-bold">
+            Fuel your child's creativity with our  diverse <br /> toy car collection
             </h2>
-            <p>
-              There are many variations of passages of available, but the
-              majority have suffered alteration in some form
+            <p className="text-lg">
+             
+Race into excitement with our top-quality toy cars. Ignite imagination, fuel play, and create lasting memories. Start the fun now!
             </p>
             <div>
-              <button className="btn btn-primary mr-5">Discover More</button>
-              <button className="btn btn-outline btn-secondary">
-                Latest Project
-              </button>
+              <button className="btn btn-outline btn-warning px-8">Get 
+               Start</button>
+             
             </div>
           </div>
         </div>
-        <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
+        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide1" className="btn btn-circle mr-5">
             ❮
           </a>
@@ -62,24 +67,23 @@ const Banner = () => {
       </div>
       <div id="slide3" className="carousel-item relative w-full">
         <img src={img3} className="w-full rounded-xl" />
-        <div className="absolute rounded-xl flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
-          <div className="text-white space-y-7 pl-12 w-1/2">
-            <h2 className="text-6xl font-bold">
-              Affordable Price For Car Servicing
+        <div className="absolute flex items-center justify-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0) 100%)] mx-auto w-full">
+        <div className="text-white space-y-7 text-center ">
+            <h2 className="text-3xl font-bold">
+            Fuel your child's creativity with our  diverse <br /> toy car collection
             </h2>
-            <p>
-              There are many variations of passages of available, but the
-              majority have suffered alteration in some form
+            <p className="text-lg">
+             
+Race into excitement with our top-quality toy cars. Ignite imagination, fuel play, and create lasting memories. Start the fun now!
             </p>
             <div>
-              <button className="btn btn-primary mr-5">Discover More</button>
-              <button className="btn btn-outline btn-secondary">
-                Latest Project
-              </button>
+              <button className="btn btn-outline btn-warning px-8">Get 
+               Start</button>
+             
             </div>
           </div>
         </div>
-        <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
+        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide2" className="btn btn-circle mr-5">
             ❮
           </a>
@@ -90,24 +94,23 @@ const Banner = () => {
       </div>
       <div id="slide4" className="carousel-item relative w-full">
         <img src={img4} className="w-full rounded-xl" />
-        <div className="absolute rounded-xl flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
-          <div className="text-white space-y-7 pl-12 w-1/2">
-            <h2 className="text-6xl font-bold">
-              Affordable Price For Car Servicing
+        <div className="absolute flex items-center justify-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0) 100%)] mx-auto w-full">
+        <div className="text-white space-y-7 text-center ">
+            <h2 className="text-3xl font-bold ">
+            Fuel your child's creativity with our  diverse <br /> toy car collection
             </h2>
-            <p>
-              There are many variations of passages of available, but the
-              majority have suffered alteration in some form
+            <p className="text-lg">
+             
+Race into excitement with our top-quality toy cars. Ignite imagination, fuel play, and create lasting memories. Start the fun now!
             </p>
             <div>
-              <button className="btn btn-primary mr-5">Discover More</button>
-              <button className="btn btn-outline btn-secondary">
-                Latest Project
-              </button>
+              <button className="btn btn-outline btn-warning px-8">Get 
+               Start</button>
+             
             </div>
           </div>
         </div>
-        <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0">
+        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide3" className="btn btn-circle mr-5">
             ❮
           </a>

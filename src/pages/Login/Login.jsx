@@ -61,7 +61,8 @@ const Login = () => {
 						<h1 className='text-2xl font-bold'>Please Login!</h1>
 					</div>
 
-    <form onSubmit={handleLogin} className='card-body'>
+<div className='card-body'>
+<form onSubmit={handleLogin} >
                            <div className='form-control'>
                                <label className='label'>
                                    <span className='label-text'>Email</span>
@@ -86,9 +87,9 @@ const Login = () => {
                                />
 
                            </div>
-                           <p>{error}</p>
+                           <p className="text-red-500">{error}</p>
                            <div className='form-control mt-6'>
-                               <button className='btn btn-warning'>Login</button>
+                               <button className='btn btn-warning  hover:bg-yellow-600 '>Login</button>
                            </div>
                            <div>
                                <p className='text-sm text-center'>
@@ -101,6 +102,8 @@ const Login = () => {
                            <div className='flex flex-col w-full border-opacity-50'>
                                <div className='divider'>OR</div>
                            </div>
+                           </form>
+
                            <div>
 
                                <button
@@ -111,7 +114,9 @@ const Login = () => {
                                    Continue with Google
                                </button>
                            </div>
-                       </form>
+
+                           </div>
+                     
     </div>
   </div>
 </div>

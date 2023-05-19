@@ -1,13 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/logo2.png'
+import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip as ReactTooltip } from "react-tooltip";
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const NavBar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+    const handleLogOut = () => {
+      logOut()
+        .then()
+        .catch((error) => console.log(error));
+    };
+    console.log(user);
     const navItems = <>
     <li><Link to="/">Home</Link> </li>
     <li> <Link to="/allToys">All Toys</Link> </li>
-    <li> <Link to="/myToys">My Toys</Link> </li>
-    <li> <Link to="/addToy">Add Toy</Link> </li>
+   {user &&
+    <li> <Link to="/myToys">My Toys</Link> </li>}
+    {user &&
+    <li> <Link to="/addToy">Add Toy</Link> </li>}
+    <li><Link to="/blog">Blog</Link> </li>
 </>
 return (
     <div className="navbar bg-slate-50 h-24 mb-4 sticky top-0 z-20">
@@ -38,9 +52,30 @@ return (
             </ul>
         </div>
         <div className="navbar-end">
-       <Link to='/login'>
-       <button className="btn btn-warning">Login</button>
-       </Link>
+            <div>
+            {user && (
+            <img
+              id="img"
+              alt=""
+              className="w-12 h-12 border rounded-full dark:bg-gray-500 dark:border-gray-700"
+              src={user.photoURL}
+            />
+          )}
+           {user && (
+            <ReactTooltip
+              anchorId="img"
+              place="bottom"
+              variant="info"
+              content={user.displayName}
+            />
+          )}
+            </div>
+     
+       {user ?  <Link >
+       <button onClick={handleLogOut} className="btn btn-warning mx-5">Log Out</button>
+       </Link> :  <Link to='/login'>
+       <button className="btn btn-warning  hover:bg-yellow-600 ">Login</button>
+       </Link>}
         </div>
     </div>
 );

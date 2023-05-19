@@ -70,7 +70,8 @@ const Register = () => {
 						<h1 className='text-2xl font-bold'>Please Register!</h1>
 					</div>
       
-          <form onSubmit={handleRegister}  className='card-body'>
+      <div className='card-body'>
+      <form onSubmit={handleRegister}  >
                                  <div className='form-control'>
                                      <label className='label'>
                                          <span className='label-text'>Name</span>
@@ -121,9 +122,9 @@ const Register = () => {
                                      />
       
                                  </div>
-                                 <p>{error}</p>
+                                 <p className="text-red-500">{error}</p>
                                  <div className='form-control mt-6'>
-                                 <button className='btn btn-warning'>Register</button>
+                                 <button className='btn btn-warning  hover:bg-yellow-600 '>Register</button>
                                  </div>
                                  <div>
                                  <p className='text-sm text-center'>
@@ -136,6 +137,8 @@ const Register = () => {
                                  <div className='flex flex-col w-full border-opacity-50'>
                                      <div className='divider'>OR</div>
                                  </div>
+                                 </form>
+      
                                  <div>
       
                                      <button onClick={handleGoogleSignIn}
@@ -145,7 +148,7 @@ const Register = () => {
                                          Continue with Google
                                      </button>
                                  </div>
-                             </form>
+                                 </div>  
           </div>
         </div>
       </div>

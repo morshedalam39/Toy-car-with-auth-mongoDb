@@ -1,9 +1,46 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import ToyTable from './ToyTable';
 
 const AllToys = () => {
+    const [toys , setToys]=useState() 
+
+    useEffect(() => {
+        fetch('http://localhost:5000/toys')
+            .then(res => res.json())
+            .then(data => setToys(data));
+    }, [])
+    console.log(toys);
     return (
         <div>
-           <h1>all toys come soon</h1> 
+          <div className="overflow-x-auto">
+  <table className="table table-compact w-full">
+    <thead>
+      <tr>
+        <th>No</th> 
+        <th>Seller Name</th> 
+        <th>Toy Name</th> 
+        <th>Price</th> 
+        <th>Available Quantity</th> 
+        <th></th>
+
+      </tr>
+    </thead> 
+    
+
+        {
+          toys?.map((toy , index) => <ToyTable
+            key={toy._id}
+            toy={toy}
+            index={index}
+        ></ToyTable>)
+        }
+
+
+
+    
+
+  </table>
+</div>
         </div>
     );
 };
