@@ -63,23 +63,19 @@ const Footer = () => {
               </ul>
             </div>
             <div className="space-y-3">
-              <h3 className="uppercase dark:text-gray-50">Company</h3>
+              <h3 className="uppercase dark:text-gray-50">Contact</h3>
               <ul className="space-y-1">
                 <li>
                   <a rel="noopener noreferrer" href="#">
-                    About us
+                  Email: playCarLand@gmail.com
                   </a>
                 </li>
                 <li>
                   <a rel="noopener noreferrer" href="#">
-                    Contact us
+                  Phone: 00567543665
                   </a>
                 </li>
-                <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Guides
-                  </a>
-                </li>
+
               </ul>
             </div>
             <div className="space-y-3">

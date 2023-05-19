@@ -21,7 +21,7 @@ const AllToys = () => {
         <th>Toy Name</th> 
         <th>Price</th> 
         <th>Available Quantity</th> 
-        <th></th>
+        <th>Action</th>
 
       </tr>
     </thead> 
