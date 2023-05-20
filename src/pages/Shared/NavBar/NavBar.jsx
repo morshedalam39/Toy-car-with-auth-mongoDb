@@ -13,7 +13,7 @@ const NavBar = () => {
         .then()
         .catch((error) => console.log(error));
     };
-    console.log(user);
+
     const navItems = <>
     <li><Link to="/">Home</Link> </li>
     <li> <Link to="/allToys">All Toys</Link> </li>
@@ -72,9 +72,9 @@ return (
             </div>
      
        {user ?  <Link >
-       <button onClick={handleLogOut} className="btn btn-warning mx-5">Log Out</button>
+       <button onClick={handleLogOut} className="btn btn-warning hover:bg-yellow-600 mx-5">Log Out</button>
        </Link> :  <Link to='/login'>
-       <button className="btn btn-warning  hover:bg-yellow-600 ">Login</button>
+       <button className="btn btn-warning hover:bg-yellow-600 ">Login</button>
        </Link>}
         </div>
     </div>

@@ -8,7 +8,7 @@ const Mytoys = () => {
     useTitle('My Toys')
     const{user}=useContext(AuthContext);
     const [myToy , setMyToy]=useState([]);
-    // const [short , Setshort]=useState(short)
+    const [short , Setshort]=useState(0)
 
 
     const handleDelete = _id => {
@@ -37,6 +37,7 @@ const Mytoys = () => {
                                 'Your Coffee has been deleted.',
                                 'success'
                             )
+
                             const remaining = myToy.filter(cof => cof._id !== _id);
                             setMyToy(remaining);
                         }
@@ -47,18 +48,24 @@ const Mytoys = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myToys/${user?.email}`)
+        fetch(`http://localhost:5000/myToys?email=${user.email}&num=${short}`)
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
             setMyToy(data);
             
           });
-      }, [user]);
+      }, [user, short]);
     console.log(myToy);
     return (
         <div>
-            <div className="overflow-x-auto">
+            <div className='w-full bg-slate-100'>
+            <div className="btn-group flex justify-center">
+
+  <button onClick={()=>Setshort(-1)} className="btn btn-outline btn-warning bg-white">High Price</button>
+  <button onClick={()=>Setshort(1)} className="btn btn-outline btn-warning bg-white">Low Price</button>
+</div>
+            </div>
+            <div className="overflow-x-auto mt-5">
   <table className="table table-compact w-full">
     <thead>
       <tr>
@@ -69,13 +76,7 @@ const Mytoys = () => {
         <th>Detail description</th>
         <th>Action</th>
         <th>Action</th>
-        <th><div className="dropdown">
-  <label tabIndex={0} className="btn m-1">Click</label>
-  <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-    <li><a>Item 1</a></li>
-    <li><a>Item 2</a></li>
-  </ul>
-</div></th>
+
 
       </tr>
     </thead> 

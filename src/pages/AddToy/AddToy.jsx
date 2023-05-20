@@ -52,6 +52,7 @@ const AddToy = () => {
             showConfirmButton: false,
             timer: 1500
           })
+          data=""
         }
       });
   };
@@ -145,9 +146,9 @@ const AddToy = () => {
                 id="sub-category"
                 name="category"
               >
-                <option value="category1">Police Car</option>
-                <option value="category2">Sports Car</option>
-                <option value="category3">Mini Car</option>
+                <option value="Police Car">Police Car</option>
+                <option value="Sports Car">Sports Car</option>
+                <option value="Mini Car">Mini Car</option>
               </select>
             </div>
             <div className="w-full md:w-1/2 px-2">

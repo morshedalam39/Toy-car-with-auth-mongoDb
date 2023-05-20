@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import ToyTable from './ToyTable';
 import useTitle from '../../hooks/useTitle';
+import Swal from 'sweetalert2';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const AllToys = () => {
   useTitle('All Toys')
     const [toys , setToys]=useState() 
     const [searchByToyName , setsearchByToyName]=useState("")
+    const {user}=useContext(AuthContext);
 
     useEffect(() => {
         fetch('http://localhost:5000/toys')
@@ -22,6 +25,18 @@ const AllToys = () => {
         });
     };
     console.log(toys);
+
+    const handelToast =()=>{
+      if(!user){
+          Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Login First',
+             
+            })
+      }
+
+  }
     return (
         <div>
                 <div className="flex flex-col md:flex-row items-center justify-center ">
@@ -57,6 +72,7 @@ const AllToys = () => {
             key={toy._id}
             toy={toy}
             index={index}
+            handelToast={handelToast}
         ></ToyTable>)
         }
 

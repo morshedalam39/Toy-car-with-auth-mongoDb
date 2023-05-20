@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ToyTable = ({toy , index}) => {
+const ToyTable = ({toy , index , handelToast}) => {
     const {sellerName ,name ,price, quantity, _id}=toy
     console.log(toy);
     return (
@@ -15,7 +15,7 @@ const ToyTable = ({toy , index}) => {
         <td>
 
             <Link to={`/viewDetails/${_id}`}>
-            <button className="btn btn-outline btn-warning">View Details</button>
+            <button onClick={handelToast}  className="btn btn-outline btn-warning">View Details</button>
 
             </Link>
             </td>
