@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 
 const Mytoys = () => {
     const{user}=useContext(AuthContext);
-    const [myToy , setMyToy]=useState();
+    const [myToy , setMyToy]=useState([]);
 
     const handleDelete = _id => {
         console.log(_id);

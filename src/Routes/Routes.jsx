@@ -8,6 +8,9 @@ import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
 import PrivateRoute from "./PrivateRoute";
 import Blog from '../pages/Blog/Blog'
+import Update from "../pages/MyToys/Update";
+import DetailsView from "../pages/DetailsView/DetailsView";
+
 
 const router = createBrowserRouter([
     {
@@ -29,6 +32,16 @@ const router = createBrowserRouter([
         {
             path: '/addToy',
             element: <PrivateRoute><AddToy></AddToy></PrivateRoute>,
+        }, 
+        {
+            path: '/viewDetails/:id',
+            element: <DetailsView></DetailsView>,
+            loader: ({params}) => fetch(`http://localhost:5000/singelToy/${params.id}`)
+        }, 
+        {
+            path: '/update/:id',
+            element: <PrivateRoute><Update></Update></PrivateRoute>,
+            loader: ({params}) => fetch(`http://localhost:5000/singelToy/${params.id}`)
         }, 
         {
             path: '/register',

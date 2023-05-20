@@ -12,7 +12,17 @@ const AllToys = () => {
     console.log(toys);
     return (
         <div>
-          <div className="overflow-x-auto">
+                <div className="flex flex-col md:flex-row items-center justify-center ">
+      <input
+        className="border border-gray-300 rounded-md py-2 px-4 mb-2 md:mb-0 md:mr-2 w-full md:w-auto"
+        type="text"
+        placeholder="Search"
+      />
+      <button className="btn btn-warning hover:bg-yellow-600 " type="button">
+        Search
+      </button>
+    </div>
+          <div className="overflow-x-auto mt-5">
   <table className="table table-compact w-full">
     <thead>
       <tr>
