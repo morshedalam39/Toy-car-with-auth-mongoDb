@@ -4,9 +4,11 @@ import gif from '../../assets/secure-login.gif'
 import React, { useContext, useState } from "react";
 import { Link,  useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from '../../providers/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 
 const Login = () => {
+  useTitle('Login')
 
     const navigate = useNavigate();
     const location = useLocation();

@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css"
 
 const OurTeam = () => {
+
+	useEffect(() => {
+		AOS.init({duration: 2000});
+	}, [])
+
     return (
         <div>
           <section className="py-6 dark:bg-gray-800 dark:text-gray-100">
-	<div className="container flex flex-col items-center justify-center p-4 mx-auto sm:p-10">
+	<div data-aos="fade-up" data-aos-anchor-placement="top-center"  className="container flex flex-col items-center justify-center p-4 mx-auto sm:p-10">
     <h1 className="text-center text-4xl font-bold py-8">
               Meet Our Team
               <hr className="w-52 mt-2 border-[3px] mx-auto border-yellow-400" />

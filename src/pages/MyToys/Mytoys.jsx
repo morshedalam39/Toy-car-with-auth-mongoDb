@@ -2,10 +2,14 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import MyToyTable from './MyToyTable';
 import Swal from 'sweetalert2';
+import useTitle from '../../hooks/useTitle';
 
 const Mytoys = () => {
+    useTitle('My Toys')
     const{user}=useContext(AuthContext);
     const [myToy , setMyToy]=useState([]);
+    // const [short , Setshort]=useState(short)
+
 
     const handleDelete = _id => {
         console.log(_id);
@@ -48,6 +52,7 @@ const Mytoys = () => {
           .then((data) => {
             console.log(data);
             setMyToy(data);
+            
           });
       }, [user]);
     console.log(myToy);
@@ -64,6 +69,13 @@ const Mytoys = () => {
         <th>Detail description</th>
         <th>Action</th>
         <th>Action</th>
+        <th><div className="dropdown">
+  <label tabIndex={0} className="btn m-1">Click</label>
+  <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+    <li><a>Item 1</a></li>
+    <li><a>Item 2</a></li>
+  </ul>
+</div></th>
 
       </tr>
     </thead> 

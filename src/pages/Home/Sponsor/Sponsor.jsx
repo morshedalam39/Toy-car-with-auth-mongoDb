@@ -1,11 +1,18 @@
-
+import AOS from "aos";
+import "aos/dist/aos.css"
+import { useEffect } from "react";
 
 const Sponsor = () => {
+
+	useEffect(() => {
+		AOS.init({duration: 2000});
+	}, [])
+
   return (
 <div>
 
 <section className="dark:bg-gray-800 dark:text-gray-100">
-	<div className="container p-6 mx-auto space-y-6 text-center lg:p-8 lg:space-y-8">
+	<div data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="container p-6 mx-auto space-y-6 text-center lg:p-8 lg:space-y-8">
     <h1 className="text-center text-4xl font-bold py-8">
               Our Sponsor
               <hr className="w-40 mt-2 border-[3px] mx-auto border-yellow-400" />

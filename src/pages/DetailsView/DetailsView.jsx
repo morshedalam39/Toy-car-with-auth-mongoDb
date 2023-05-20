@@ -3,8 +3,10 @@ import { useLoaderData } from 'react-router-dom';
 
 
 import ReactStarsRating from 'react-awesome-stars-rating';
+import useTitle from '../../hooks/useTitle';
 
 const DetailsView = () => {
+    useTitle('View Details')
     const toyDetails=useLoaderData();
     const {name , photo, sellerName,sellerEmail,price,ratting,quantity,description}=toyDetails
     console.log(toyDetails);

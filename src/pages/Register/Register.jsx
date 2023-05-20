@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import {  FaGoogle } from 'react-icons/fa';
 import gif from '../../assets/secure-login.gif'
 import { AuthContext } from '../../providers/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 const Register = () => {
+  useTitle('Register')
     const {
         createUser,
         signInWithGoogle,
