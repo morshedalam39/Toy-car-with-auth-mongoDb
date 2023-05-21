@@ -61,8 +61,8 @@ const Mytoys = () => {
             <div className='w-full bg-slate-100'>
             <div className="btn-group flex justify-center">
 
-  <button onClick={()=>Setshort(-1)} className="btn btn-outline btn-warning bg-white">High Price</button>
-  <button onClick={()=>Setshort(1)} className="btn btn-outline btn-warning bg-white">Low Price</button>
+  <button onClick={()=>Setshort(-1)} className={`${short == -1 ? "btn btn-warning " :"btn btn-outline btn-warning"}`}>High Price</button>
+  <button onClick={()=>Setshort(1)} className={`${short == 1 ? "btn btn-warning " :"btn btn-outline btn-warning"}`}>Low Price</button>
 </div>
             </div>
             <div className="overflow-x-auto mt-5">

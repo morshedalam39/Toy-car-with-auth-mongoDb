@@ -18,7 +18,7 @@ const Banner = () => {
             <h2 className="text-3xl font-bold">
             Fuel your child's creativity with our  diverse <br /> toy car collection
             </h2>
-            <p className="text-lg">
+            <p className="text-lg ">
              
 Race into excitement with our top-quality toy cars. Ignite imagination, fuel play, and create lasting memories. Start the fun now!
             </p>

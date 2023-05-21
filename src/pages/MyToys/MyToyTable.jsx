@@ -11,7 +11,7 @@ const MyToyTable = ({myToy ,index  ,handleDelete}) => {
         <td>{name}</td> 
         <td>{price}</td> 
         <td>{quantity}</td> 
-        <td>{description}</td> 
+        <td>{description.slice(0,40)}.......</td> 
         <td>
             <Link to={`/update/${_id}`}>
             <button className="btn btn-outline btn-warning">Update</button>

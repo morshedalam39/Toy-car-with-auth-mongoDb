@@ -5,6 +5,7 @@ import React, { useContext, useState } from "react";
 import { Link,  useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from '../../providers/AuthProvider';
 import useTitle from '../../hooks/useTitle';
+import Swal from 'sweetalert2';
 
 
 const Login = () => {
@@ -33,6 +34,14 @@ const Login = () => {
           form.reset();
           setError("");
           navigate(from, { replace: true });
+          Swal.fire({
+            position: 'top-center',
+            icon: 'success',
+            title: 'Login Successfully',
+            showConfirmButton: false,
+            timer: 1500
+          })
+          
         })
         .catch((error) => {
           setError(error.message);

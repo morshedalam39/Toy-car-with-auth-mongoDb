@@ -47,7 +47,8 @@ const ShopCategory = () => {
         <div className='mt-10'>
               <Tabs className="text-center">
     <TabList >
-      <Tab onClick={()=>setCategory('Police Car')}>Police Car</Tab>
+   
+      <Tab  onClick={()=>setCategory('Police Car')}>Police Car</Tab>
       <Tab onClick={()=>setCategory('Sports Car')}>Sports Car</Tab>
       <Tab onClick={()=>setCategory('Mini Car')}>Mini Car</Tab>
     </TabList>

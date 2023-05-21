@@ -13,7 +13,7 @@ const ShopCategoryCard = ({cat ,handelToast}) => {
             
  <div className="card w-full bg-base-100 shadow-xl">
   <figure className="px-10 pt-10">
-    <img src={photo}alt="Shoes" className="rounded-xl" />
+    <img  src={photo}alt="Shoes" className="rounded-xl w-80 h-52" />
   </figure>
   <div className="card-body items-center text-center">
     <h2 className="card-title">Name:{name}</h2>

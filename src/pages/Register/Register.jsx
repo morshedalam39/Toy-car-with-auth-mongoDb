@@ -4,6 +4,7 @@ import {  FaGoogle } from 'react-icons/fa';
 import gif from '../../assets/secure-login.gif'
 import { AuthContext } from '../../providers/AuthProvider';
 import useTitle from '../../hooks/useTitle';
+import Swal from 'sweetalert2';
 
 const Register = () => {
   useTitle('Register')
@@ -35,6 +36,14 @@ const Register = () => {
                 setError("");
                 form.reset();
                 console.log(createdUser);
+                Swal.fire({
+                  position: 'top-center',
+                  icon: 'success',
+                  title: 'Register Successfully',
+                  showConfirmButton: false,
+                  timer: 1500
+                })
+                
         
                 GetProfile(result.user, name, photo)
                   .then((result) => {
