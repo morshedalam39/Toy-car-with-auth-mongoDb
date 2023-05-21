@@ -36,7 +36,7 @@ return (
             </div>
            <div>
            <Link to="/" >
-                <img className='w-40' src={logo} alt="" />
+                <img className='w-32' src={logo} alt="" />
                 
                 
             </Link>
@@ -51,7 +51,7 @@ return (
                 {navItems}
             </ul>
         </div>
-        <div className="navbar-end">
+        <div className="md:navbar-end">
             <div>
             {user && (
             <img

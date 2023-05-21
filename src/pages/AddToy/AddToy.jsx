@@ -71,6 +71,7 @@ const AddToy = () => {
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
                 htmlFor="name"
+              
               >
                Toy Name
               </label>
@@ -80,6 +81,7 @@ const AddToy = () => {
                 type="text"
                 placeholder="Enter Toy Name"
                 name="name"
+                required
                
               />
             </div>
@@ -96,6 +98,7 @@ const AddToy = () => {
                 type="text"
                 placeholder="Enter picture URL"
                 name="photo"
+                required
               />
             </div>
           </div>
@@ -115,6 +118,7 @@ const AddToy = () => {
                 placeholder="Enter seller name"
                 name="sellerName"
                 value={user?.displayName}
+                required
               />
             </div>
             <div className="w-full md:w-1/2 px-2">
@@ -131,6 +135,7 @@ const AddToy = () => {
                 placeholder="Enter Seller Email"
                 name="sellerEmail"
                 value={user?.email}
+                required
               />
             </div>
           </div>
@@ -167,6 +172,7 @@ const AddToy = () => {
                 placeholder="Enter price"
                 min="0"
                 name="price"
+                required
               />
             </div>
           </div>
@@ -188,6 +194,7 @@ const AddToy = () => {
                 max="5"
                 placeholder="Enter rating"
                 name="ratting"
+                required
               />
             </div>
             <div className="w-full md:w-1/2 px-2">
@@ -204,6 +211,7 @@ const AddToy = () => {
                 placeholder="Enter available quantity"
                 min="0"
                 name="quantity"
+                required
               />
             </div>
           </div>
@@ -221,6 +229,7 @@ const AddToy = () => {
               rows="4"
               placeholder="Enter detail description"
               name="description"
+              required
             ></textarea>
           </div>
           <div className="flex items-center justify-center">

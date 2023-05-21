@@ -31,7 +31,7 @@ An access token and a refresh token are both used in authentication and authoriz
 </section> 
         </div>
 
-		// huiiugiugu
+		
     );
 };
 
