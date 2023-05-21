@@ -4,6 +4,8 @@ import 'react-tabs/style/react-tabs.css';
 import ShopCategoryCard from './ShopCategoryCard';
 import { AuthContext } from '../../../providers/AuthProvider';
 import Swal from 'sweetalert2';
+import AOS from "aos";
+import "aos/dist/aos.css"
 
 
 const ShopCategory = () => {
@@ -12,8 +14,13 @@ const ShopCategory = () => {
     const [category, setCategory]=useState('Police Car');
     const [catData , setCatData]=useState([]);
 
+    
+	useEffect(() => {
+		AOS.init({duration: 3000});
+	}, [])
+
     useEffect(() => {
-        fetch(`http://localhost:5000/category/${category}`)
+        fetch(`https://toy-car-server-lac.vercel.app/category/${category}`)
           .then((res) => res.json())
           .then((data) => {
             setCatData(data);
@@ -37,7 +44,7 @@ const ShopCategory = () => {
 
 
     return (
-        <div>
+        <div className='mt-10'>
               <Tabs className="text-center">
     <TabList >
       <Tab onClick={()=>setCategory('Police Car')}>Police Car</Tab>
@@ -46,7 +53,7 @@ const ShopCategory = () => {
     </TabList>
 
 
-   <div className='grid md:grid-cols-3 gap-6 '>
+   <div className='grid md:grid-cols-3 gap-6 ' data-aos="zoom-in">
 {
         catData?.map((cat) => <ShopCategoryCard
           key={cat._id}

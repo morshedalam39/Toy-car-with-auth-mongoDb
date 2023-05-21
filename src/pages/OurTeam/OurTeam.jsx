@@ -11,12 +11,12 @@ const OurTeam = () => {
     return (
         <div>
           <section className="py-6 dark:bg-gray-800 dark:text-gray-100">
-	<div data-aos="fade-up" data-aos-anchor-placement="top-center"  className="container flex flex-col items-center justify-center p-4 mx-auto sm:p-10">
-    <h1 className="text-center text-4xl font-bold py-8">
+	<div  className="container flex flex-col items-center justify-center p-4 mx-auto sm:p-10">
+    <h1 data-aos="fade-up" data-aos-anchor-placement="top-center"  className="text-center text-4xl font-bold py-8">
               Meet Our Team
               <hr className="w-52 mt-2 border-[3px] mx-auto border-yellow-400" />
             </h1>
-		<div className="flex flex-row flex-wrap-reverse justify-center mt-8">
+		<div data-aos="fade-up" data-aos-anchor-placement="top-center"  className="flex flex-row flex-wrap-reverse justify-center mt-8">
 			<div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-gray-100 dark:text-gray-800">
 				<img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full dark:bg-gray-500" src="https://i.ibb.co/DWMfTFD/istockphoto-1330095463-1024x1024.jpg" />
 				<div className="flex-1 my-4">

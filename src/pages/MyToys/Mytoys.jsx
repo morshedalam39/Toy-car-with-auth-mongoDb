@@ -25,7 +25,7 @@ const Mytoys = () => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/myToy/${_id}`, {
+                fetch(`https://toy-car-server-lac.vercel.app/myToy/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -48,7 +48,7 @@ const Mytoys = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myToys?email=${user.email}&num=${short}`)
+        fetch(`https://toy-car-server-lac.vercel.app/myToys?email=${user.email}&num=${short}`)
           .then((res) => res.json())
           .then((data) => {
             setMyToy(data);

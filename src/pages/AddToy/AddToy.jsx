@@ -34,7 +34,7 @@ const AddToy = () => {
     };
     console.log(toyData);
 
-    fetch("http://localhost:5000/toys", {
+    fetch("https://toy-car-server-lac.vercel.app/toys", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -51,8 +51,10 @@ const AddToy = () => {
             title: 'Toy Added successfully',
             showConfirmButton: false,
             timer: 1500
+
           })
-          data=""
+          form.reset()
+          
         }
       });
   };

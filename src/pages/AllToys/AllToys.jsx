@@ -11,13 +11,13 @@ const AllToys = () => {
     const {user}=useContext(AuthContext);
 
     useEffect(() => {
-        fetch('http://localhost:5000/toys')
+        fetch('https://toy-car-server-lac.vercel.app/toys')
             .then(res => res.json())
             .then(data => setToys(data));
     }, [])
 
     const handleSearch = () => {
-      fetch(`http://localhost:5000/searchToyName/${searchByToyName}`)
+      fetch(`https://toy-car-server-lac.vercel.app/searchToyName/${searchByToyName}`)
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
